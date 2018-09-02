@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<title>谁是 Po 主 - 微博图片作者识别 - By 堕络</title>
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="author" content="duoluosb.com">
+<meta name="keywords" content="微博,po主,微博识图,微博作者">
+<meta name="description" content="微博图片作者识别功能，情报来源：https://www.v2ex.com/t/388152。">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="谁是 Po 主">
+<meta name="application-name" content="谁是 Po 主">
+<meta name="format-detection" content="telephone=no">
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="static/apple-touch-icon.png">
+<link rel="canonical" href="http://weibo.duoluosb.com/">
+<link rel="stylesheet" href="//cdn.bootcss.com/amazeui/2.3.0/css/amazeui.min.css">
+<link rel="stylesheet" href="static/main.min.css?v=0.4">
+<header class="am-topbar am-topbar-fixed-top">
+  <div class="am-container">
+    <h1 class="am-topbar-brand">
+      <a href="https://www.duoluosb.com/">堕络's Blog</a></h1>
+    <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-secondary am-show-sm-only" data-am-collapse="{target: '#collapse-head'}">
+      <span class="am-sr-only">导航切换</span>
+      <span class="am-icon-bars"></span>
+    </button>
+    <nav class="am-collapse am-topbar-collapse am-fr" id="collapse-head">
+      <ul class="am-nav am-nav-pills am-topbar-nav">
+        <li class="am-active">
+          <a href="//weibo.duoluosb.com">谁是 Po 主</a>
+        </li>
+            <li>
+              <a href="//music.duoluosb.com">音乐搜索器</a>
+            </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<section class="am-g about">
+  <div class="am-container am-margin-vertical-xl">
+    <header class="am-padding-vertical">
+      <h2 class="about-title about-color">谁是 Po 主</h2>
+      <p class="am-text-center">微博图片作者识别功能</header>
+    <hr>
+    <div class="am-u-lg-12 am-padding-vertical">
+      <form class="am-form am-margin-bottom-lg" method="post" id="form-vld">
+        <div class="am-u-md-12 am-u-sm-centered">
+          <div class="am-form-group">
+            <input type="url" id="imgsrc" class="am-form-field am-input-lg am-text-center am-radius" pattern="^https?:\/\/[a-z0-9]+\.sinaimg\.cn\/.+$" placeholder="微博图片地址" data-validation-message="请输入有效的微博图片地址" data-am-loading="{loadingText: ' '}" required>
+            <div class="am-alert am-alert-danger"></div>
+          </div>
+          <button type="submit" id="submit" class="am-btn am-btn-primary am-btn-lg am-btn-block am-radius" data-am-loading="{spinner: 'cog', loadingText: '正在识别...', resetText: 'Get &#x221A;'}">Get &#x221A;</button></div>
+      </form>
+      <form class="am-form am-u-md-12 am-u-sm-centered img-main">
+        <a type="button" id="backnow" class="am-btn am-btn-success am-btn-lg am-btn-block am-radius am-margin-bottom-lg">成功 Get &#x221A; 返回继续
+          <i class="am-icon-reply am-icon-fw"></i></a>
+        <div class="am-input-group am-input-group-sm am-margin-bottom-sm" data-am-popover="{content: 'Po 主', trigger: 'hover'}">
+          <span class="am-input-group-label">
+            <i class="am-icon-link am-icon-fw"></i>
+          </span>
+          <input id="img-link-src" class="am-form-field" spellcheck="false">
+          <span class="am-input-group-btn">
+            <a id="img-link-btn" class="am-btn am-btn-default" target="_blank">查看 Po 主</a></span>
+        </div>
+        <p id="img-show" data-am-popover="{content: '预览图', trigger: 'hover'}"></form>
+      <div class="am-u-md-12 am-u-sm-centered am-margin-vertical img-tips">
+        <h4>帮助：</h4>
+        <p>最新情报得知，微博图片地址算法被破解。可以根据图片地址逆推出发图人，只要你的图片来自微博图床，就算没有水印也能找出是谁发的图。
+          <p>微博图片地址指的是类似这种链接：
+            <blockquote>https://wx3.sinaimg.cn/mw690/006Yqysfly1fqqhyrrakqj306o06o3z7.jpg</blockquote>
+            <p>可在图片上
+              <code>点击右键 -> 复制图片地址</code>获取
+              <p>
+                <small>注：本功能并不能百分百找出发图人，部分图片找出的发图人可能不存在。</small></div>
+    </div>
+  </div>
+</section>
+<footer class="footer">
+  <p class="am-text-sm">&copy; 2018&nbsp;&nbsp;制作:
+    <a href="https://duoluosb.com/" target="_blank" rel="author">堕络</a>&nbsp;&nbsp;情报来源:
+    <a href="https://www.v2ex.com/t/388152" target="_blank">V2EX</a>
+    <a href="https://weibo.2333.me/" target="_blank">当前系统抄自麦葱</a>
+</footer>
+<script src="//cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/amazeui/2.3.0/js/amazeui.min.js"></script>
+<script src="static/main.min.js?v=0.3"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?81eb4bafb05721a3c66a28283a80d8a0";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
